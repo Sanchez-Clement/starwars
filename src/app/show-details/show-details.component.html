@@ -1,3 +1,13 @@
-<p>
-  show-details works!
-</p>
+ <ng-template #aCacher>I'm here
+<div style="text-align:center" >
+
+  <h1>
+    Welcome to {{title}}!
+  </h1>
+  <!-- <img width="300" src="../assets/images/starwars.png" /> -->
+<p *ngFor="let resultats of swrequestservice.resultatDetailNom">{{resultats}} ========>{{swrequestservice.resultatDetail[resultats]}}</p>
+
+
+
+</div>
+</ng-template>

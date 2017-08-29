@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { SwRequestService } from '../sw-request.service';
 
 @Component({
   selector: 'app-show-details',
@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ShowDetailsComponent implements OnInit {
 
-  constructor() { }
+  constructor(private swrequestservice:SwRequestService) {}
 
   ngOnInit() {
 

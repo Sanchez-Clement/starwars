@@ -1,12 +1,12 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
+<div style="text-align:center" *ngIf="swrequestservice.resultatDetail == any; else aCacher">
   <h1>
     Welcome to {{title}}!
   </h1>
   <img width="300" src="../assets/images/starwars.png" />
-<div class="">
-  <select class="" name=""  >
-    <option value="" *ngFor ="let result of swrequestservice.results" (click)="this.swrequestservice.envoi(result)">{{result}}</option>
+<div ngbDropdown>
+  <select ngbDropdown  >
+    <option class="dropdown-item" value="" *ngFor ="let result of swrequestservice.results" (click)="this.swrequestservice.envoi(result)">{{result}}</option>
   </select>
 
 
@@ -15,9 +15,14 @@
 <ul>
 
 
-<li  *ngFor ="let resultat of swrequestservice.resultatEnvoi" (click)="affichedetail(resultat['url'])">
+<a  *ngFor ="let resultat of swrequestservice.resultatEnvoi" (click)="this.swrequestservice.affichedetail(resultat['url'])" [routerLink]="['/service',resultat[swrequestservice.resultatEnvoiNon]] ">
 {{resultat[swrequestservice.resultatEnvoiNon]}}
 
+</a>
 
-</li>
 </ul>
+
+
+</div>
+
+<router-outlet></router-outlet>

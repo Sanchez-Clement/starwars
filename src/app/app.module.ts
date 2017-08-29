@@ -10,6 +10,14 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
 import { ShowDetailsComponent } from './show-details/show-details.component';
 import { SwRequestService } from './sw-request.service';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import {RouterModule, Routes} from '@angular/router'
+const appRoutes: Routes = [
+  { path: 'service/:resultat[swrequestservice.resultatEnvoiNon]', component: ShowDetailsComponent },
+
+
+
+];
 
 
 @NgModule({
@@ -21,6 +29,11 @@ import { SwRequestService } from './sw-request.service';
     BrowserModule,
     HttpClientModule,
     HttpModule,
+
+    NgbModule.forRoot(),
+    RouterModule.forRoot(appRoutes
+    //  { enableTracing: true } // <-- debugging purposes only
+   ),
 
 
   ],
