@@ -8,19 +8,23 @@ import {HttpClientModule} from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs/Observable';
+import { ShowDetailsComponent } from './show-details/show-details.component';
+import { SwRequestService } from './sw-request.service';
 
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ShowDetailsComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     HttpModule,
 
+
   ],
-  providers: [],
+  providers: [SwRequestService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
