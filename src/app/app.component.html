@@ -19,9 +19,9 @@
 <ul>
 
 
-<li  *ngFor ="let resultat of resultatEnvoi" >
-{{resultat.name}}
-{{resultat.title}}
+<li  *ngFor ="let resultat of resultatEnvoi" (click)="affichedetail(resultat['url'])">
+{{resultat[resultatEnvoiNon]}}
+
 
 </li>
 </ul>
