@@ -11,19 +11,26 @@ import { Observable } from 'rxjs/Observable';
 import { ShowDetailsComponent } from './show-details/show-details.component';
 import { SwRequestService } from './sw-request.service';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
-import {RouterModule, Routes} from '@angular/router'
+import {RouterModule, Routes} from '@angular/router';
+import { ShowListComponent } from './show-list/show-list.component';
+import { HomeComponent } from './home/home.component'
 const appRoutes: Routes = [
-  { path: 'service/:resultat[swrequestservice.resultatEnvoiNon]', component: ShowDetailsComponent },
 
-
-
+{ path: 'home/:result', component: ShowListComponent },
+{ path: 'home/:swrequestservice.urlEnvoi/:swrequestservice.recupId(resultat["url"])', component: ShowDetailsComponent },
+{ path: '',
+    redirectTo: 'home/',
+    pathMatch: 'full'
+  },
 ];
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    ShowDetailsComponent
+    ShowDetailsComponent,
+    ShowListComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

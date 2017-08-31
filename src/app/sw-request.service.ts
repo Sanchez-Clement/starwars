@@ -7,8 +7,9 @@ export class SwRequestService {
   resultatEnvoi : any;
   resultatEnvoiNon : any;
   urlEnvoi : any;
-  resultatDetail : any;
+  resultatDetail : Object;
   resultatDetailNom : any;
+  urlresult  : any;
 
   constructor(private http: HttpClient) {}
 
@@ -31,7 +32,7 @@ export class SwRequestService {
     });
   }
   affichedetail(test) {
-  
+
     this.http.get(test).subscribe(data => {
       // Read the result field from the JSON response.
       this.resultatDetail = data;
@@ -42,5 +43,7 @@ export class SwRequestService {
 
     });
   }
-
+recupId(test){
+  return test.match(/\d+/g)[0];
+}
 }

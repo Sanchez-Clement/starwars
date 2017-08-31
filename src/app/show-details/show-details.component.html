@@ -1,13 +1,14 @@
- <ng-template #aCacher>I'm here
+
 <div style="text-align:center" >
+  <table class="collection">
+    <tr *ngFor="let resultats of swrequestservice.resultatDetailNom" >
+      <td class="collection-item avatar">{{resultats}}</td>
+      <td class="collection-item">{{swrequestservice.resultatDetail[resultats]}}</td>
+      <hr>
+    </tr>
+  </table>
 
-  <h1>
-    Welcome to {{title}}!
-  </h1>
-  <!-- <img width="300" src="../assets/images/starwars.png" /> -->
-<p *ngFor="let resultats of swrequestservice.resultatDetailNom">{{resultats}} ========>{{swrequestservice.resultatDetail[resultats]}}</p>
 
-
+<button type="button" name="button" (click)="goBack()">Back</button>
 
 </div>
-</ng-template>

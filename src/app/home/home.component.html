@@ -1,0 +1,21 @@
+<nav class="grey darken-4">
+  <!-- *ngIf="swrequestservice.resultatDetail == any" -->
+  <!-- <h1>
+    Welcome to {{title}}!
+  </h1>
+  <img width="300" src="../assets/images/starwars.png" /> -->
+<!-- <div > -->
+  <ul class="nav-wrapper">
+    <li   *ngFor ="let result of swrequestservice.results"  >
+      <a (click)="this.swrequestservice.envoi(result)"  [routerLink]="['/home',result] "routerLinkActive="active">{{result}}</a></li>
+
+  </ul>
+
+
+
+
+<!-- </div> -->
+
+
+
+</nav>

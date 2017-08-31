@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
 
-import { SwRequestService } from './sw-request.service';
 
 @Component({
   selector: 'app-root',
@@ -12,10 +11,11 @@ import { SwRequestService } from './sw-request.service';
 
 export class AppComponent implements OnInit{
   title = 'Star Wars';
-  propriety : any;
-constructor(private swrequestservice:SwRequestService) {}
+
+
+constructor() {}
 ngOnInit (){
-this.swrequestservice.ngOnInit();
+
 
 };
 

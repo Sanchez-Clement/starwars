@@ -1,0 +1,15 @@
+<section class=" card blue-grey lighten-5">
+
+
+<ul class="collection" id="test">
+
+
+<li  *ngFor ="let resultat of swrequestservice.resultatEnvoi" class="collection-item " >
+<a  [routerLink]="['/home',swrequestservice.urlEnvoi,swrequestservice.recupId(resultat['url'])] " (click)="this.swrequestservice.affichedetail(resultat['url'])" routerLinkActive="active">{{resultat[swrequestservice.resultatEnvoiNon]}}</a>
+
+</li>
+
+</ul>
+</section>
+<!-- <router-outlet></router-outlet> -->
+<!-- <app-show-details></app-show-details> -->

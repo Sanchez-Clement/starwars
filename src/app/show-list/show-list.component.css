@@ -1,0 +1,19 @@
+section {
+  border-radius: 10px;
+  width: 80%;
+  margin: auto;
+}
+
+section ul li {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+#test li:hover {
+  border : 2px solid black;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
