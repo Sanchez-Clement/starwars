@@ -39,11 +39,27 @@ export class SwRequestService {
 
 
       this.resultatDetailNom = Object.keys(data);
+    
 
 
     });
   }
+
 recupId(test){
   return test.match(/\d+/g)[0];
 }
+
+
+  affichedetailUrl(test3) {
+
+    this.http.get('https://swapi.co/api/' + test3).subscribe(data => {
+      // Read the result field from the JSON response.
+      this.resultatDetail = data;
+
+
+      this.resultatDetailNom = Object.keys(data);
+
+
+    });
+  }
 }

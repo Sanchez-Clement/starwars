@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SwRequestService } from '../sw-request.service';
+import {RouterModule, Routes, ActivatedRoute, ParamMap } from '@angular/router';
 
 @Component({
   selector: 'app-home',
